@@ -1,26 +1,27 @@
 {
-  "name": "for-trilogy",
+  "name": "socketflow-monorepo",
   "version": "0.1.0",
   "private": true,
+  "workspaces": [
+    "packages/*",
+    "apps/*"
+  ],
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "eslint"
-  },
-  "dependencies": {
-    "next": "16.4.3",
-    "react": "19.3.0",
-    "react-dom": "19.3.0"
+    "cli": "npm run cli --workspace=packages/engine --",
+    "dev": "npm run dev --workspace=apps/studio",
+    "dev:studio": "npm run dev --workspace=apps/studio",
+    "dev:engine": "npm run dev --workspace=packages/engine",
+    "start:engine": "npm run start --workspace=packages/engine",
+    "start:studio": "npm run start --workspace=apps/studio",
+    "build:engine": "npm run build --workspace=packages/engine",
+    "build:studio": "npm run build --workspace=apps/studio",
+    "build": "npm run build --workspace=packages/engine && npm run build --workspace=apps/studio",
+    "test": "npm run test --workspace=packages/engine",
+    "benchmark": "npm run benchmark --workspace=packages/engine"
   },
   "devDependencies": {
-    "@tailwindcss/turbopack": "^4",
-    "@types/node": "^20",
-    "@types/react": "^19",
-    "@types/react-dom": "^19",
-    "eslint": "^9",
-    "eslint-config-next": "16.4.3",
-    "tailwindcss": "^4",
-    "typescript": "^5"
+    "@tailwindcss/postcss": "^4.3.3",
+    "postcss": "^8.5.32",
+    "typescript": "^5.7.0"
   }
 }

@@ -1,0 +1,29 @@
+{
+  "name": "socketflow-engine",
+  "version": "0.1.0",
+  "description": "Zero-Dependency Priority-Queue WebSocket Multiplexer, Prefix-Tree Guardrail & Cancelable AI Pipeline Engine",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "type": "module",
+  "bin": {
+    "socketflow": "./bin/socketflow.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/server/run-server.js",
+    "dev": "tsx src/server/run-server.ts",
+    "cli": "tsx src/cli/index.ts",
+    "test": "tsx --test tests/engine.test.ts",
+    "benchmark": "tsx src/benchmark/cli-benchmark.ts"
+  },
+  "dependencies": {
+    "ws": "^8.18.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.17.0",
+    "@types/ws": "^8.5.14",
+    "tsx": "^4.19.3",
+    "typescript": "^5.7.0"
+  }
+}
+

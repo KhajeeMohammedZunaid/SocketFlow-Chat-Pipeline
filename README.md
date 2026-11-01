@@ -2,10 +2,6 @@
 
 **A simple, real-time WebSocket engine that keeps your chat fast and stops streaming AI responses from blocking urgent messages.**
 
-Created by **Khajee Mohammed Zunaid**  
-Email: [23102a010452@mbu.asia](mailto:23102a010452@mbu.asia)  
-GitHub: [KhajeeMohammedZunaid](https://github.com/KhajeeMohammedZunaid)
-
 ---
 
 ## What is SocketFlow?
